@@ -21,12 +21,12 @@ section{padding:100px 0}.section-head{display:flex;justify-content:space-between
 .locations{display:grid;grid-template-columns:1fr 1fr;gap:2px}.loc{padding:60px;background:var(--white)}.loc.dark{background:var(--black);color:#fff}.location-title{font-size:64px;margin:20px 0}.loc p{color:#777;line-height:1.8;margin-bottom:25px}.loc.dark p{color:#aaa}
 .gallery{background:var(--black);color:#fff}.gallery-note{color:#999;margin-bottom:30px;font-size:13px}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.gallery-item{height:270px;border:1px solid #373832;background:linear-gradient(135deg,#292a25,#111);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:20px}.gallery-item:before{content:"NSR";position:absolute;font-family:"Barlow Condensed";font-size:100px;color:#2d2e29;left:50%;top:50%;transform:translate(-50%,-50%)}.gallery-item span{position:relative;z-index:2;font-size:11px;text-transform:uppercase;letter-spacing:.12em}
 .contact{background:var(--black);color:#fff}.contact-grid{display:grid;grid-template-columns:40% 60%;gap:45px}.contact h2{font-size:80px;margin-bottom:25px}.contact-info{color:#aaa;font-size:14px;line-height:1.8}.contact-info b{color:#fff}.form{background:var(--white);color:#111;padding:40px}.row{display:grid;grid-template-columns:1fr 1fr;gap:25px}.field{margin-bottom:25px}.field label{display:block;margin-bottom:8px;font-size:10px;font-weight:800;letter-spacing:.08em}.field input,.field select,.field textarea{width:100%;border:0;border-bottom:1px solid #ccc7bd;background:transparent;padding:12px 0;outline:none;font-size:13px}.field textarea{min-height:90px;resize:vertical}.submit{width:100%;padding:18px;border:0;background:var(--yellow);color:#111;font-weight:800;cursor:pointer}.submit:hover{background:#ffd957}
-.map-section{position:relative;height:500px;background:#ddd}.map-section iframe{width:100%;height:100%;border:0}.map-overlay{position:absolute;left:5%;top:50%;transform:translateY(-50%);background:var(--black);color:#fff;padding:30px;border-radius:5px;max-width:350px;box-shadow:0 20px 50px rgba(0,0,0,.25)}.map-overlay h3{font-family:"Barlow Condensed";font-size:30px;text-transform:uppercase;margin:5px 0 10px}.map-overlay p{color:#aaa;font-size:12px}.map-overlay a{display:inline-block;margin-top:15px;color:var(--yellow);font-size:12px;font-weight:800}
+.map-section{position:relative;height:500px;background:#ddd}.map-section iframe{width:100%;height:100%;border:0}.map-overlay{position:absolute;left:5%;;transform:translateY(-50%);background:var(--black);color:#fff;padding:30px;border-radius:5px;max-width:350px;box-shadow:0 20px 50px rgba(0,0,0,.25)}.map-overlay h3{font-family:"Barlow Condensed";font-size:30px;text-transform:uppercase;margin:5px 0 10px}.map-overlay p{color:#aaa;font-size:12px}.map-overlay a{display:inline-block;margin-top:15px;color:var(--yellow);font-size:12px;font-weight:800}
 footer{background:#0b0c0b;color:#85867f;padding:30px 0;font-size:11px}.foot{display:flex;justify-content:space-between;gap:20px}
 @media(max-width:900px){.links{display:none}.nav{min-height:75px}.hero h1{font-size:65px}.cards,.service-guide,.split,.locations,.contact-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr}.details-body{grid-template-columns:1fr}.section-head{display:block}.section-copy{margin-top:20px}.brand img{width:58px;height:50px}}
 @media(max-width:560px){.topbar{font-size:9px;gap:8px}section{padding:70px 0}.hero{min-height:620px}.hero-inner{padding:70px 0 100px}.hero h1{font-size:53px}.hero-description{font-size:14px}.hero-points{display:grid;gap:8px}.section-title{font-size:50px}.gallery-grid{grid-template-columns:1fr}.gallery-item{height:220px}.content,.loc,.guide-left{padding:40px 25px}.location-title{font-size:52px}.contact h2{font-size:60px}.row{grid-template-columns:1fr}.form{padding:28px}.map-section{height:600px}.map-overlay{left:5%;right:5%;top:auto;bottom:25px;transform:none;max-width:none}.foot{flex-direction:column}}
 </style>
-</head>
+</head>8
 
 <body>
 
@@ -248,38 +248,35 @@ with servicing, repairs and appearance care under one name.
 </section>
 
     
-<section id="locations">
+<section class="map-section" id="maps">
 <div class="wrap">
-<div class="locations">
-
-<div class="loc">
-<div class="eyebrow">MUMBAI BRANCH</div>
-<h3 class="location-title">ANDHERI EAST</h3>
-  
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.5555555555553!2d72.8494!3d19.1136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9d5d5d5d5d5%3A0x5555555555555555!2sNSR%20Automotive%20KBM%20Compound%20Military%20Road%20Marol%20Andheri%20East%20Mumbai!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-<p>
-KBM Compound, L/1/3, Military Road,<br>
-opposite Ashok Nagar, Marol,<br>
-Andheri East, Mumbai 400072
-</p>
-<a class="btn" href="https://www.google.com/maps/search/?api=1&query=NSR%20Automotive%20KBM%20Compound%20Military%20Road%20Marol%20Mumbai" target="_blank">Get Directions ↗</a>
+<div class="section-head">
+<div>
+<div class="eyebrow">VISIT US</div>
+<h2 class="section-title">WORKSHOP LOCATIONS.</h2>
+</div>
+<p class="section-copy">Find us in Mumbai and Goa with easy directions and contact information.</p>
+</div>
 </div>
 
-<div class="loc dark">
-<div class="eyebrow">GOA BRANCH</div>
-<h3 class="location-title">MADGAON</h3>
-  
-  <iframe src="https://maps.app.goo.gl/qMHx9A9hqHywocJCA" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  
-<p>
-NSR Automotive, Morlem,<br>
-Borda, Madgaon,<br>
-Goa 403601
-</p>
-<a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=NSR%20Automotive%20Morlem%20Borda%20Madgaon%20Goa" target="_blank">Get Directions ↗</a>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:40px;">
+
+<div class="map-section">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.836914946852!2d72.84949!3d19.11356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9d5d5d5d5d5%3A0x5555555555555555!2sKBM%20Compound%20Military%20Road%20Marol%20Andheri%20East%20Mumbai!5e0!3m2!1sen!2sin!4v1694000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="map-overlay">
+<h3>MUMBAI WORKSHOP</h3>
+<p>Marol, Andheri East</p>
+</div>
 </div>
 
+<div class="map-section">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.7777777777777!2d73.82552!3d15.29335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb914a1a1a1a1a1%3A0x7777777777777777!2sNSR%20Automotive%20Morlem%20Borda%20Madgaon%20Goa!5e0!3m2!1sen!2sin!4v1694000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="map-overlay">
+<h3>GOA WORKSHOP</h3>
+<p>Morlem, Madgaon</p>
 </div>
+</div>
+
 </div>
 </section>
 
