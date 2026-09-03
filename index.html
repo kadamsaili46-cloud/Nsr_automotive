@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NSR Automotive - Multi-brand car servicing, diagnostics, repairs, detailing, body work and insurance assistance in Mumbai and Goa.">
+<meta name="theme-color" content="#111210">
+<title>NSR Automotive | Car Performance Unleashed</title>
+<link rel="icon" type="image/png" href="Nsrlogo.png">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --black:#111210;
+  --black2:#1c1d1a;
+  --cream:#f5f2e9;
+  --white:#fffdf8;
+  --yellow:#f6c329;
+  --muted:#77786f;
+  --line:#dedbd0;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--cream);
+  color:#151613;
+  font-family:Inter,Arial,sans-serif;
+  line-height:1.6;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font-family:inherit}
+.wrap{width:min(1280px,92%);margin:auto}
+
+/* TOP BAR */
+.topbar{
+  min-height:38px;
+  background:var(--yellow);
+  color:#111;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  padding:8px 15px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-align:center;
+}
+.topbar a{text-decoration:underline}
+
+/* HEADER */
+header{
+  background:var(--black);
+  color:#fff;
+  position:sticky;
+  top:0;
+  z-index:100;
+  border-bottom:1px solid #30312c;
+}
+.nav{
+  width:min(1280px,92%);
+  min-height:86px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-right:auto;
+}
+.brand img{
+  width:70px;
+  height:58px;
+  object-fit:contain;
+  background:#fff;
+  border-radius:5px;
+  padding:3px;
+}
+.brand strong{
+  display:block;
+  font-size:18px;
+  letter-spacing:.08em;
+}
+.brand small{
+  display:block;
+  margin-top:3px;
+  color:#8d8e87;
+  font-size:8px;
+  letter-spacing:.16em;
+}
+.links{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+.links a{
+  color:#d6d6cf;
+  font-size:13px;
+  font-weight:600;
+  transition:.2s;
+}
+.links a:hover{color:var(--yellow)}
+.wa{
+  background:var(--yellow);
+  color:#111;
+  padding:14px 20px;
+  font-size:12px;
+  font-weight:800;
+  border-radius:3px;
+  white-space:nowrap;
+}
+
+/* HERO */
+.hero{
+  min-height:700px;
+  background:var(--black);
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  width:650px;
+  height:650px;
+  right:-250px;
+  top:-250px;
+  border:2px solid rgba(246,195,41,.25);
+  border-radius:50%;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  width:850px;
+  height:300px;
+  right:-180px;
+  bottom:-180px;
+  background:var(--yellow);
+  transform:rotate(-8deg);
+  border-radius:50%;
+}
+.hero-inner{
+  width:min(1280px,92%);
+  margin:auto;
+  position:relative;
+  z-index:2;
+  padding:100px 0 120px;
+}
+.eyebrow{
+  color:var(--yellow);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.16em;
+  margin-bottom:20px;
+}
+.eyebrow:before{
+  content:"";
+  display:inline-block;
+  width:35px;
+  height:2px;
+  background:var(--yellow);
+  vertical-align:middle;
+  margin-right:10px;
+}
+.hero h1,
+.section-title,
+.dark-title,
+.contact h2,
+.location-title,
+.location-info h3{
+  font-family:"Barlow Condensed",Impact,sans-serif;
+  font-weight:900;
+  text-transform:uppercase;
+  line-height:.88;
+}
+.hero h1{
+  font-size:clamp(55px,8vw,95px);
+  max-width:750px;
+}
+.hero h1 span{color:var(--yellow)}
+.hero-description{
+  max-width:650px;
+  margin:35px 0;
+  color:#b6b6ae;
+  font-size:17px;
+  line-height:1.8;
+}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 23px;
+  border:1px solid #5b5c55;
+  font-size:12px;
+  font-weight:800;
+  transition:.2s;
+}
+.btn.primary{
+  background:var(--yellow);
+  border-color:var(--yellow);
+  color:#111;
+}
+.btn.primary:hover{background:#ffd957}
+.hero-points{
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  margin-top:45px;
+  color:#999;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.hero-points span:before{
+  content:"/";
+  color:var(--yellow);
+  margin-right:8px;
+}
+
+/* GENERAL SECTIONS */
+section{padding:100px 0}
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:50px;
+  margin-bottom:50px;
+}
+.section-title{font-size:clamp(48px,6vw,72px)}
+.section-copy{
+  max-width:470px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.8;
+}
+
+/* SERVICES */
+.cards{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:14px;
+}
+.card{
+  min-height:330px;
+  padding:34px;
+  background:var(--white);
+  border:1px solid var(--line);
+  position:relative;
+  transition:.25s;
+}
+.card:hover{transform:translateY(-5px)}
+.card.dark{
+  background:var(--black2);
+  color:#fff;
+  border:0;
+}
+.card.yellow{
+  background:var(--yellow);
+}
+.num{
+  position:absolute;
+  top:22px;
+  right:25px;
+  color:#999;
+  font-weight:700;
+}
+.icon{color:#c79d14;font-size:28px}
+.card h3{
+  font-family:"Barlow Condensed",Impact,sans-serif;
+  font-size:34px;
+  line-height:.95;
+  text-transform:uppercase;
+  margin:90px 0 18px;
+}
+.card p{color:#777;font-size:13px}
+.card.dark p{color:#aaa}
+
+/* SERVICE GUIDE */
+.service-guide{
+  display:grid;
+  grid-template-columns:32% 68%;
+  margin-top:80px;
+}
+.guide-left{
+  background:var(--black);
+  color:#fff;
+  padding:55px;
+}
+.dark-title{font-size:64px;margin:20px 0 30px}
+.guide-left p{color:#a7a8a0;margin-bottom:30px}
+.accordion{background:var(--white)}
+details{border-bottom:1px solid #ddd9ce}
+summary{
+  list-style:none;
+  padding:30px;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  font-family:"Barlow Condensed",Impact,sans-serif;
+  font-size:27px;
+  font-weight:800;
+  text-transform:uppercase;
+}
+summary::-webkit-details-marker{display:none}
+.details-body{
+  padding:0 30px 30px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  color:#707168;
+  font-size:13px;
+}
+.details-body ul{padding-left:20px}
+.details-body li{margin-bottom:7px}
+
+/* WORKSHOP */
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+.visual{
+  min-height:520px;
+  background:var(--black);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+.car-art{
+  width:70%;
+  height:250px;
+  border:4px solid #aaa;
+  border-radius:50% 50% 15% 15%;
+  position:relative;
+}
+.car-art:before,
+.car-art:after{
+  content:"";
+  position:absolute;
+  bottom:-42px;
+  width:80px;
+  height:80px;
+  border:4px solid #aaa;
+  border-radius:50%;
+  background:var(--black);
+}
+.car-art:before{left:15%}
+.car-art:after{right:15%}
+.content{padding:70px;background:var(--white)}
+
+/* =========================================================
+   WORKSHOP LOCATIONS - CORRECTED TO MATCH 2ND SCREENSHOT
+========================================================= */
+.locations-section{
+  width:100%;
+  background:var(--cream);
+  padding:100px 0;
+}
+
+.locations-section .locations-header{
+  width:min(1280px,92%);
+  margin:0 auto 55px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:50px;
+}
+
+.locations-grid{
+  width:min(1200px,92%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2px;
+}
+
+.location-card{
+  min-width:0;
+  background:var(--white);
+}
+
+/* MAP ON TOP */
+.location-map{
+  height:325px;
+  position:relative;
+  overflow:hidden;
+  background:#ddd;
+}
+
+.location-map iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+}
+
+/* YELLOW MAP LABEL */
+.map-label{
+  position:absolute;
+  z-index:5;
+  top:18px;
+  left:20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:var(--yellow);
+  padding:10px 15px;
+  box-shadow:0 3px 12px rgba(0,0,0,.12);
+}
+
+.map-label img{
+  width:38px;
+  height:30px;
+  object-fit:contain;
+  background:#fff;
+  padding:2px;
+}
+
+.map-label span{
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:1px;
+  color:#111;
+  white-space:nowrap;
+}
+
+/* INFO UNDER MAP */
+.location-info{
+  min-height:355px;
+  padding:38px 40px 40px;
+}
+
+.mumbai-info{
+  background:var(--white);
+  color:#111;
+}
+
+.goa-info{
+  background:var(--black);
+  color:#fff;
+}
+
+.branch-eyebrow{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+  color:#e5bb16;
+  margin-bottom:20px;
+}
+
+.branch-eyebrow span{
+  width:36px;
+  height:2px;
+  background:#e5bb16;
+}
+
+.location-info h3{
+  font-size:clamp(48px,5vw,62px);
+  margin:0 0 22px;
+  letter-spacing:-1px;
+}
+
+.location-info .address{
+  margin:0;
+  font-size:15px;
+  line-height:1.7;
+}
+
+.mumbai-info .address{color:#666}
+.goa-info .address{color:#aaa}
+
+.direction-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:28px;
+  min-width:155px;
+  height:52px;
+  padding:0 22px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:800;
+  transition:all .25s ease;
+}
+
+.mumbai-info .direction-btn{
+  background:#111;
+  color:#fff;
+  border:1px solid #111;
+}
+.mumbai-info .direction-btn:hover{
+  background:var(--yellow);
+  color:#111;
+  border-color:var(--yellow);
+}
+
+.goa-info .direction-btn{
+  background:var(--yellow);
+  color:#111;
+  border:1px solid var(--yellow);
+}
+.goa-info .direction-btn:hover{
+  background:#fff;
+  color:#111;
+  border-color:#fff;
+}
+
+/* GALLERY */
+.gallery{
+  background:var(--black);
+  color:#fff;
+}
+.gallery-note{
+  color:#999;
+  margin-bottom:30px;
+  font-size:13px;
+}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+.gallery-item{
+  height:270px;
+  border:1px solid #373832;
+  background:linear-gradient(135deg,#292a25,#111);
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+  padding:20px;
+}
+.gallery-item:before{
+  content:"NSR";
+  position:absolute;
+  font-family:"Barlow Condensed";
+  font-size:100px;
+  color:#2d2e29;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+.gallery-item span{
+  position:relative;
+  z-index:2;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+
+/* CONTACT */
+.contact{
+  background:var(--black);
+  color:#fff;
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:40% 60%;
+  gap:45px;
+}
+.contact h2{
+  font-size:80px;
+  margin-bottom:25px;
+}
+.contact-info{
+  color:#aaa;
+  font-size:14px;
+  line-height:1.8;
+}
+.contact-info b{color:#fff}
+.form{
+  background:var(--white);
+  color:#111;
+  padding:40px;
+}
+.row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+.field{margin-bottom:25px}
+.field label{
+  display:block;
+  margin-bottom:8px;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+  border:0;
+  border-bottom:1px solid #ccc7bd;
+  background:transparent;
+  padding:12px 0;
+  outline:none;
+  font-size:13px;
+}
+.field textarea{
+  min-height:90px;
+  resize:vertical;
+}
+.submit{
+  width:100%;
+  padding:18px;
+  border:0;
+  background:var(--yellow);
+  color:#111;
+  font-weight:800;
+  cursor:pointer;
+}
+.submit:hover{background:#ffd957}
+
+/* FOOTER */
+footer{
+  background:#0b0c0b;
+  color:#85867f;
+  padding:30px 0;
+  font-size:11px;
+}
+.foot{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+/* TABLET */
+@media(max-width:900px){
+  .links{display:none}
+  .nav{min-height:75px}
+  .hero h1{font-size:65px}
+  .cards,
+  .service-guide,
+  .split,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .details-body{grid-template-columns:1fr}
+  .section-head{display:block}
+  .section-copy{margin-top:20px}
+  .brand img{width:58px;height:50px}
+
+  .locations-section .locations-header{
+    display:block;
+  }
+  .locations-section .section-copy{
+    margin-top:20px;
+  }
+  .locations-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+/* MOBILE */
+@media(max-width:560px){
+  .topbar{
+    font-size:9px;
+    gap:8px;
+  }
+  section{padding:70px 0}
+  .hero{min-height:620px}
+  .hero-inner{padding:70px 0 100px}
+  .hero h1{font-size:53px}
+  .hero-description{font-size:14px}
+  .hero-points{
+    display:grid;
+    gap:8px;
+  }
+  .section-title{font-size:50px}
+  .gallery-grid{grid-template-columns:1fr}
+  .gallery-item{height:220px}
+  .content,
+  .loc,
+  .guide-left{
+    padding:40px 25px;
+  }
+  .location-title{font-size:52px}
+  .contact h2{font-size:60px}
+  .row{grid-template-columns:1fr}
+  .form{padding:28px}
+
+  .locations-section{
+    padding:70px 0;
+  }
+
+  .locations-section .locations-header{
+    width:calc(100% - 36px);
+    margin-bottom:35px;
+  }
+
+  .locations-grid{
+    width:calc(100% - 36px);
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .location-map{
+    height:280px;
+  }
+
+  .location-info{
+    min-height:auto;
+    padding:32px 28px 35px;
+  }
+
+  .location-info h3{
+    font-size:50px;
+  }
+
+  .map-label{
+    top:15px;
+    left:15px;
+    padding:8px 11px;
+  }
+
+  .map-label img{
+    width:34px;
+    height:27px;
+  }
+
+  .map-label span{
+    font-size:10px;
+  }
+
+  .foot{
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  MULTI-BRAND CAR CARE IN MUMBAI &amp; GOA
+  <a href="tel:+919820129679">CALL +91 98201 29679</a>
+</div>
+
+<header>
+<nav class="nav">
+
+<a class="brand" href="#home">
+  <img src="Nsrlogo.png" alt="NSR Automotive Logo">
+  <span>
+    <strong>AUTOMOTIVE</strong>
+    <small>CAR PERFORMANCE UNLEASHED</small>
+  </span>
+</a>
+
+<div class="links">
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#how">How it works</a>
+  <a href="#workshop">Workshop</a>
+  <a href="#locations">Locations</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<a class="wa" href="https://wa.me/919820129679?text=Hello%20NSR%20Automotive,%20I%20would%20like%20to%20discuss%20my%20car." target="_blank" rel="noopener">
+  WhatsApp Us
+</a>
+
+</nav>
+</header>
+
+<main id="home">
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-inner">
+
+<div class="eyebrow">PRECISION CARE FOR EVERY DRIVE</div>
+
+<h1>YOUR CAR.<br><span>OUR CRAFT.</span></h1>
+
+<p class="hero-description">
+From routine service to complex repairs, NSR Automotive keeps your car dependable,
+responsive and ready for the road from Mumbai to Goa.
+</p>
+
+<div class="btns">
+<a class="btn primary" href="#contact">Book a Service ↗</a>
+<a class="btn" href="tel:+919820129679">Speak to the Workshop</a>
+</div>
+
+<div class="hero-points">
+<span>Multi-brand expertise</span>
+<span>Clear communication</span>
+<span>End-to-end support</span>
+</div>
+
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<div class="wrap">
+
+<div class="section-head">
+<div>
+<div class="eyebrow">WHAT WE DO</div>
+<h2 class="section-title">ONE WORKSHOP.<br>COMPLETE CAR CARE.</h2>
+</div>
+
+<p class="section-copy">
+Practical maintenance, accurate fault-finding and finish-focused restoration
+for everyday cars, premium models and everything between.
+</p>
+</div>
+
+<div class="cards">
+
+<article class="card dark">
+<div class="num">01</div>
+<div class="icon">⚙</div>
+<h3>General Service &amp; Maintenance</h3>
+<p>Periodic servicing, oil and filter changes, fluid checks and preventive care.</p>
+</article>
+
+<article class="card">
+<div class="num">02</div>
+<div class="icon">◇</div>
+<h3>Diagnostics &amp; Repairs</h3>
+<p>Systematic checks for warning lights, performance issues, electrical faults and mechanical repairs.</p>
+</article>
+
+<article class="card">
+<div class="num">03</div>
+<div class="icon">◈</div>
+<h3>Body Work &amp; Paint</h3>
+<p>Denting, painting, accidental repair, panel restoration and insurance claim assistance.</p>
+</article>
+
+<article class="card yellow">
+<div class="num">04</div>
+<div class="icon">✦</div>
+<h3>Detailing &amp; Protection</h3>
+<p>Interior cleaning, polishing, paint correction, wrapping and colour-change solutions.</p>
+</article>
+
+</div>
+
+<!-- SERVICE GUIDE -->
+<div class="service-guide" id="how">
+
+<div class="guide-left">
+<div class="eyebrow">SERVICE GUIDE</div>
+<h2 class="dark-title">WHAT YOUR<br>CAR GETS.</h2>
+<p>Open a service to see what is covered. Final recommendations and estimates are confirmed after inspection.</p>
+<a class="btn primary" href="#contact">Discuss Your Car ↓</a>
+</div>
+
+<div class="accordion">
+
+<details open>
+<summary>01 / Periodic Service &amp; Maintenance <span>−</span></summary>
+<div class="details-body">
+<p>Routine care based on the car's condition, usage and recommended service interval.</p>
+<ul>
+<li>Engine oil and filter replacement</li>
+<li>Fluid, belt, hose and battery checks</li>
+<li>Brake, tyre and suspension inspection</li>
+<li>Computer scan and service reset</li>
+</ul>
+</div>
+</details>
+
+<details>
+<summary>02 / Diagnostics &amp; Mechanical Repairs <span>+</span></summary>
+<div class="details-body">
+<p>Fault finding and repair for mechanical, electrical and performance issues.</p>
+<ul>
+<li>Computer diagnostics</li>
+<li>Engine and transmission checks</li>
+<li>Electrical troubleshooting</li>
+<li>Repair and replacement work</li>
+</ul>
+</div>
+</details>
+
+<details>
+<summary>03 / Brakes, Tyres &amp; Suspension <span>+</span></summary>
+<div class="details-body">
+<p>Inspection and repair of the systems that keep the car stable, controlled and safe.</p>
+<ul>
+<li>Brake pad and disc checks</li>
+<li>Suspension inspection</li>
+<li>Steering diagnosis</li>
+<li>Tyre condition checks</li>
+</ul>
+</div>
+</details>
+
+<details>
+<summary>04 / AC Service &amp; Electrical Care <span>+</span></summary>
+<div class="details-body">
+<p>Air-conditioning checks, gas detection and electrical care.</p>
+<ul>
+<li>AC performance inspection</li>
+<li>Leak detection</li>
+<li>Electrical fault finding</li>
+<li>Battery and charging checks</li>
+</ul>
+</div>
+</details>
+
+<details>
+<summary>05 / Body Work, Paint &amp; Insurance Support <span>+</span></summary>
+<div class="details-body">
+<p>Accidental repair, body restoration and insurance assistance.</p>
+<ul>
+<li>Denting and painting</li>
+<li>Panel restoration</li>
+<li>Accident repair</li>
+<li>Insurance support</li>
+</ul>
+</div>
+</details>
+
+<details>
+<summary>06 / Detailing, Polishing &amp; Protection <span>+</span></summary>
+<div class="details-body">
+<p>Cosmetic care to refresh and protect your vehicle.</p>
+<ul>
+<li>Interior and exterior cleaning</li>
+<li>Polishing</li>
+<li>Paint correction</li>
+<li>Wrapping and colour change</li>
+</ul>
+</div>
+</details>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- WORKSHOP -->
+<section class="split" id="workshop">
+
+<div class="visual">
+<div class="car-art"></div>
+</div>
+
+<div class="content">
+<div class="eyebrow">TWO LOCATIONS, ONE STANDARD</div>
+<h2 class="section-title">SKILLED CARE,<br>CLOSE TO HOME.</h2>
+<p class="section-copy">
+NSR Automotive supports car owners from Marol in Mumbai to Madgaon in Goa
+with servicing, repairs and appearance care under one name.
+</p>
+</div>
+
+</section>
+
+<!-- WORKSHOP LOCATIONS -->
+<section class="locations-section" id="locations">
+
+<div class="locations-header">
+
+<div>
+<div class="eyebrow">VISIT US</div>
+<h2 class="section-title">WORKSHOP LOCATIONS.</h2>
+</div>
+
+<p class="section-copy">
+Find us in Mumbai and Goa with easy directions and contact information.
+</p>
+
+</div>
+
+<div class="locations-grid">
+
+<!-- MUMBAI -->
+<div class="location-card">
+
+<div class="location-map">
+
+<div class="map-label">
+<img src="Nsrlogo.png" alt="NSR Automotive">
+<span>01 / MUMBAI</span>
+</div>
+
+<iframe
+src="https://www.google.com/maps?q=KBM%20Compound%2C%20L%2F1%2F3%2C%20Military%20Road%2C%20opposite%20Ashok%20Nagar%2C%20Marol%2C%20Andheri%20East%2C%20Mumbai%20400072&output=embed"
+loading="lazy"
+allowfullscreen
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+</div>
+
+<div class="location-info mumbai-info">
+
+<div class="branch-eyebrow">
+<span></span>
+MAROL BRANCH
+</div>
+
+<h3>ANDHERI EAST</h3>
+
+<p class="address">
+KBM Compound, L/1/3, Military Road,<br>
+opposite Ashok Nagar, Marol,<br>
+Andheri East, Mumbai 400072
+</p>
+
+<a
+href="https://www.google.com/maps/dir/?api=1&amp;destination=KBM+Compound+L%2F1%2F3+Military+Road+Marol+Andheri+East+Mumbai+400072"
+target="_blank"
+rel="noopener"
+class="direction-btn">
+Get directions ↗
+</a>
+
+</div>
+
+</div>
+
+<!-- GOA -->
+<div class="location-card">
+
+<div class="location-map">
+
+<div class="map-label">
+<img src="Nsrlogo.png" alt="NSR Automotive">
+<span>02 / GOA</span>
+</div>
+
+<iframe
+src="https://www.google.com/maps?q=NSR%20Automotive%2C%20Morlem%2C%20Borda%2C%20Madgaon%2C%20Goa%20403601&output=embed"
+loading="lazy"
+allowfullscreen
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+</div>
+
+<div class="location-info goa-info">
+
+<div class="branch-eyebrow">
+<span></span>
+GOA BRANCH
+</div>
+
+<h3>MADGAON</h3>
+
+<p class="address">
+NSR Automotive, Morlem,<br>
+Borda, Madgaon,<br>
+Goa 403601
+</p>
+
+<a
+href="https://www.google.com/maps/dir/?api=1&amp;destination=NSR+Automotive+Morlem+Borda+Madgaon+Goa+403601"
+target="_blank"
+rel="noopener"
+class="direction-btn">
+Get directions ↗
+</a>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+<div class="wrap">
+
+<div class="eyebrow">FROM THE WORKSHOP FLOOR</div>
+<h2 class="section-title">PHOTO GALLERY.</h2>
+
+<p class="gallery-note">
+Add real NSR Automotive workshop, vehicle, repair, detailing and before/after photographs here.
+</p>
+
+<div class="gallery-grid">
+<div class="gallery-item"><span>Workshop</span></div>
+<div class="gallery-item"><span>Repairs</span></div>
+<div class="gallery-item"><span>Diagnostics</span></div>
+<div class="gallery-item"><span>Body &amp; Paint</span></div>
+<div class="gallery-item"><span>Detailing</span></div>
+<div class="gallery-item"><span>Before / After</span></div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+<div class="wrap contact-grid">
+
+<div>
+<div class="eyebrow">LET'S GET YOUR CAR SORTED.</div>
+<h2>BOOK A<br>SERVICE.</h2>
+
+<div class="contact-info">
+<p>Send your details and service requirement. WhatsApp opens with your enquiry ready to send directly to NSR Automotive.</p>
+<br>
+
+<p>
+<b>CALL THE WORKSHOP</b><br>
+<a href="tel:+919820129679">+91 98201 29679</a>
+</p>
+
+<br>
+
+<p>
+<b>EMAIL US</b><br>
+<a href="mailto:nitish.nsrauto@gmail.com">nitish.nsrauto@gmail.com</a>
+</p>
+
+</div>
+</div>
+
+<form class="form" onsubmit="sendWhatsApp(event)">
+
+<div class="row">
+
+<div class="field">
+<label>YOUR NAME</label>
+<input id="name" type="text" required placeholder="Full name">
+</div>
+
+<div class="field">
+<label>PHONE NUMBER</label>
+<input id="phone" type="tel" required placeholder="Mobile number">
+</div>
+
+</div>
+
+<div class="field">
+<label>CAR BRAND / MODEL</label>
+<input id="car" type="text" placeholder="Example: Honda City">
+</div>
+
+<div class="row">
+
+<div class="field">
+<label>PREFERRED BRANCH</label>
+
+<select id="branch">
+<option>Marol, Mumbai</option>
+<option>Madgaon, Goa</option>
+</select>
+
+</div>
+
+<div class="field">
+<label>SERVICE NEEDED</label>
+
+<select id="service">
+<option>General Service</option>
+<option>Diagnostics &amp; Repairs</option>
+<option>Brakes / Tyres / Suspension</option>
+<option>AC Service</option>
+<option>Body Work / Paint</option>
+<option>Detailing</option>
+<option>Wrapping / Colour Change</option>
+</select>
+
+</div>
+
+</div>
+
+<div class="field">
+<label>TELL US MORE</label>
+<textarea id="message" placeholder="Describe the issue or preferred timing"></textarea>
+</div>
+
+<button class="submit" type="submit">
+Send Enquiry on WhatsApp ↗
+</button>
+
+</form>
+
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+<div class="wrap foot">
+
+<span>© NSR Automotive. All Rights Reserved.</span>
+
+<span>Multi-brand Car Care • Mumbai • Goa</span>
+
+<span>
+<a href="tel:+919820129679">Call</a>
+&nbsp; · &nbsp;
+<a href="https://wa.me/919820129679" target="_blank" rel="noopener">WhatsApp</a>
+</span>
+
+</div>
+</footer>
+
+<script>
+function sendWhatsApp(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const car = document.getElementById("car").value.trim();
+  const branch = document.getElementById("branch").value;
+  const service = document.getElementById("service").value;
+  const message = document.getElementById("message").value.trim();
+
+  const whatsappMessage =
+`Hello NSR Automotive,
+
+Name: ${name}
+Phone: ${phone}
+Car: ${car}
+Branch: ${branch}
+Service: ${service}
+Message: ${message}`;
+
+  const whatsappURL =
+    "https://wa.me/919820129679?text=" +
+    encodeURIComponent(whatsappMessage);
+
+  window.open(whatsappURL, "_blank");
+}
+
+/* Change + / − automatically when accordion opens */
+document.querySelectorAll("details").forEach(function(detail) {
+  detail.addEventListener("toggle", function() {
+    const symbol = detail.querySelector("summary span");
+    if (symbol) {
+      symbol.textContent = detail.open ? "−" : "+";
+    }
+  });
+});
+</script>
+
+</body>
+</html>
